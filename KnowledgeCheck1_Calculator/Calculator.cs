@@ -8,24 +8,22 @@ namespace KnowledgeCheck1_Calculator
 {
     public class Calculator
     {
-        public int Add(int first, int second)
+        public double MathOperation(double first, double second, string operation)
         {
-            return first + second;
-        }
-
-        public int Subtract(int first, int second)
-        {
-            return first - second;
-        }
-
-        public int Multiply(int first, int second)
-        {
-            return first * second;
-        }
-
-        public double Divide(double first, double second)
-        {
-            return first / second;
+            switch (operation)
+            {
+                case "Add":
+                    return (double)(first + second);
+                case "Subtract":
+                    return (double)(first - second);
+                case "Multiply":
+                    return (double)(first * second);
+                case "Divide":
+                    return (double)first / second;
+                default:
+                    return 0;
+            }
         }
     }
-}
+    }
+

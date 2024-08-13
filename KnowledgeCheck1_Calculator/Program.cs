@@ -26,7 +26,7 @@ namespace KnowledgeCheck1_Calculator
                     if (int.TryParse(addNumber1, out int addNumOne) && int.TryParse(addNumber2, out int addNumTwo))
                     {
                         Console.Write($"{addNumber1} + {addNumber2} = ");
-                        Console.Write(calculator.Add(addNumOne, addNumTwo));
+                        Console.Write(calculator.MathOperation(addNumOne, addNumTwo, "Add"));
                     }
                     else
                     {
@@ -42,7 +42,7 @@ namespace KnowledgeCheck1_Calculator
                     if (int.TryParse(subtractNumber1, out int subNumOne) && int.TryParse(subtractNumber2, out int subNumTwo))
                     {
                         Console.Write($"{subtractNumber1} - {subtractNumber2} = ");
-                        Console.Write(calculator.Subtract(subNumOne, subNumTwo));
+                        Console.Write(calculator.MathOperation(subNumOne, subNumTwo, "Subtract"));
                     }
                     else
                     {
@@ -58,7 +58,7 @@ namespace KnowledgeCheck1_Calculator
                     if(int.TryParse(multiplyNumber1, out int multNumOne) && int.TryParse(multiplyNumber2, out int multNumTwo))
                     {
                         Console.Write($"{multiplyNumber1} * {multiplyNumber2} = ");
-                        Console.Write(calculator.Multiply(multNumOne, multNumTwo));
+                        Console.Write(calculator.MathOperation(multNumOne, multNumTwo, "Multiply"));
                     }
                     else
                     {
@@ -74,14 +74,14 @@ namespace KnowledgeCheck1_Calculator
                     if (double.TryParse(divideNumber1, out double divNumOne) && double.TryParse(divideNumber2, out double divNumTwo))
                     {
                         Console.Write($"{divideNumber1} / {divideNumber2} = ");
-                        Console.Write(calculator.Divide(divNumOne, divNumTwo));
+                        Console.Write(calculator.MathOperation(divNumOne, divNumTwo, "Divide"));
                     }
                     else
                     {
                         Console.WriteLine("One or more of the numbers is not an int");
                     }
                     break;
-                    break;
+                    
 
                 default:
                     Console.WriteLine("Unknown input");
